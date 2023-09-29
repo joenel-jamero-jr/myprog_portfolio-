@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<body>
+    
+
+<!--Header-->
+<div id="header">
+    <div class="container">
+        <nav>
+            <header> <a href="#" class="logo">Joe<span>nel</span></a></header>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#project">Project</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <img src="images/user.jpg">
+            <h1>Joenel Jamero Jr.</h1>
+            <p>Third Year IT Student.</p>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user1.jpg">
+            </div>
+            <div class="about-col-2">
+                <p>Discover</p>
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Joenel Jamero Jr., 20 years old and I'm currently a 3nd year IT major at University of Science and Technology of Southern Philippines in Jasaan. 
+                    I'm passionate about my fields, and I've been actively involved in extracurricular activities to build my skills and knowledge.
+                    Through extracurricular activities and relevant courses, I've had the opportunity to accomplishments some of my activities that I've been working on. 
+                    These experiences have taught me lesson and skills, and I'm excited to continue growing in my field. 
+                   </p>
+                   <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('sports')">Sports</div>
+                        <div class="tab-links" onclick="opentab('hobbies')">Hobbies</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                   </div>
+                   <div class="tab-contents active-tab" id="sports">
+                    <ul>
+                        <li><span>Volleyball</span></li>
+                        <li><span>Basketball</span></li>
+                        <li><span>Frisbee</span></li> 
+                        <li><span>Badminton</span></li>
+                    </ul>
+                   </div>
+                   <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Reading</span></li>
+                        <li><span>Working Out</span></li>
+                        <li><span>Watching Animes</span></li>
+                        <li><span>Singing</span></li>
+                    </ul>
+                   </div>
+                   <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2014-2015</span><br>Elementary finished in Bagaay Elementary School</li>
+                        <li><span>2018-2019</span><br>High School finished in Baliwagan National High School</li>
+                        <li><span>2020-2021</span><br>Senior High finished in Baliwagan Senior HIgh School</li>
+                        <li><span>2021-2025</span><br>College, currently studying at USTP Jasaan</li>
+                    </ul>
+                   </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Contact-->
+<section class="contact" id="contact">
+    <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <div class="contact-list">
+            <li><i class='bx bxs-send' style='color:#eb5954' ></i>contact@gmail</li>
+            <li><i class='bx bxs-phone' style='color:#eb5954' ></i>09057769562</li>
+        </div>
+        <div class="contact-icon">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-tiktok'></i></a>
+        </div>
+    </div>
+    <div class="contact-form">
+        <form action="">
+            <input type="" placeholder="Enter Your Name" required>
+            <input type="email" placeholder="Enter Your Email" required>
+            <input type="" placeholder="Enter Your Subject" required>
+            <textarea name="" id="" cols="20" rows="20" placeholder="Enter Your Message" required></textarea>
+            <input type="submit" value="submit" class="send">
+        </form>
+    </div>
+</section>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){ 
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+</body>
+</head>
+</html>
